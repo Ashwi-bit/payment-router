@@ -1,0 +1,17 @@
+# Build artifacts
+target/
+data/
+
+# IDE files
+.classpath
+.project
+.settings/
+.idea/
+.vscode/
+*.iml
+
+# OS files
+.DS_Store
+
+# Logs
+*.log

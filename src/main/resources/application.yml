@@ -1,0 +1,42 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: payment-router
+
+  datasource:
+    url: jdbc:h2:file:./data/routerdb;AUTO_SERVER=TRUE;DB_CLOSE_DELAY=-1
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: ""
+    hikari:
+      maximum-pool-size: 5
+
+  sql:
+    init:
+      mode: always
+      schema-locations: classpath:schema.sql
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+gateways:
+  list:
+    - id: gw-a
+      failureRate: 0.10
+      latencyMs: 80
+    - id: gw-b
+      failureRate: 0.30
+      latencyMs: 150
+    - id: gw-c
+      failureRate: 0.50
+      latencyMs: 250
+
+router:
+  ema-alpha: 0.3
+  max-attempts: 3
+  prior-success: 5
+  prior-failure: 5
