@@ -8,7 +8,7 @@ A mini payment orchestration service that sits between a merchant and 3 payment 
 
 ## Why
 
-Merchants lose revenue when a single gateway fails or degrades. Naive retries cause double charges. This project shows how real payment orchestration (like [Juspay's Hyperswitch](https://github.com/juspay/hyperswitch)) works in miniature.
+Merchants lose revenue when a single gateway fails or degrades. Naive retries cause double charges. This project shows how real payment orchestration (like [Juspay's Hyperswitch]([https://github.com/juspay/hyperswitch](https://payment-router-jv3x.onrender.com/health))) works in miniature.
 
 ---
 
