@@ -1,12 +1,12 @@
 server:
-  port: 8080
+  port: ${PORT:8080}
 
 spring:
   application:
     name: payment-router
 
   datasource:
-    url: jdbc:h2:file:./data/routerdb;AUTO_SERVER=TRUE;DB_CLOSE_DELAY=-1
+    url: jdbc:h2:mem:routerdb;DB_CLOSE_DELAY=-1
     driver-class-name: org.h2.Driver
     username: sa
     password: ""
